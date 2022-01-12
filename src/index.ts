@@ -63,7 +63,7 @@ export default class NginxProxyManager extends TypedEmitter<
       secret: this._cfg.password,
     });
     this._token = result.data.token;
-    this._tokenExpired = new Date(result.data.expired);
+    this._tokenExpired = new Date(result.data.expires);
     this.isReady = true;
     this.emit('ready');
   }
